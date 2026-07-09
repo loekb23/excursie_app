@@ -4,174 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Excursie App</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    :root {
-      --bg: #f5f7fb;
-      --surface: #ffffff;
-      --surface-2: #eef3ff;
-      --text: #162033;
-      --muted: #5f6b7a;
-      --line: #d9e2f2;
-      --accent: #275efe;
-      --accent-dark: #1d45c9;
-      --shadow: 0 10px 30px rgba(22, 32, 51, 0.08);
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
-      color: var(--text);
-    }
-
-    .page {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 20px 16px 32px;
-    }
-
-    header {
-      padding: 12px 0 8px;
-    }
-
-    h1,
-    h2,
-    p {
-      margin-top: 0;
-    }
-
-    h1 {
-      font-size: clamp(2rem, 7vw, 3rem);
-      line-height: 1.05;
-      margin-bottom: 10px;
-    }
-
-    h2 {
-      font-size: 1.25rem;
-      margin-bottom: 12px;
-    }
-
-    p {
-      line-height: 1.6;
-      color: var(--muted);
-      margin-bottom: 0;
-    }
-
-    .tag {
-      display: inline-block;
-      margin-bottom: 12px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: var(--surface-2);
-      color: var(--accent-dark);
-      font-size: 0.9rem;
-      font-weight: 700;
-    }
-
-    .hero {
-      padding: 20px;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: var(--surface);
-      box-shadow: var(--shadow);
-    }
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 16px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 12px 16px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 700;
-      border: 1px solid var(--line);
-    }
-
-    .button.primary {
-      background: var(--accent);
-      color: white;
-      border-color: var(--accent);
-    }
-
-    .button.secondary {
-      background: white;
-      color: var(--text);
-    }
-
-    section {
-      margin-top: 18px;
-      padding: 18px 0 0;
-    }
-
-    .grid {
-      display: grid;
-      gap: 12px;
-    }
-
-    .card {
-      padding: 16px;
-      border-radius: 16px;
-      background: var(--surface);
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-    }
-
-    .nav a {
-      display: block;
-      padding: 14px 16px;
-      border-radius: 12px;
-      text-decoration: none;
-      color: var(--text);
-      background: var(--surface);
-      border: 1px solid var(--line);
-    }
-
-    ul {
-      margin: 0;
-      padding-left: 18px;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    .small-note {
-      margin-top: 10px;
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-
-    @media (min-width: 640px) {
-      .grid.two-col {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main class="page">
     <header class="hero">
-      <span class="tag">Excursie App</span>
-      <h1>Een handige start voor de excursie van volgend schooljaar.</h1>
-      <p>
-        Dit is de eerste versie van de mobiele website. Later vul ik hier informatie in
-        over de bestemming, leuke plekken voor studenten en praktische info voor onderweg.
-      </p>
-      <div class="buttons">
-        <a class="button primary" href="#bestemming">Bekijk start</a>
-        <a class="button secondary" href="#praktisch">Praktische info</a>
+      <div class="hero-content">
+        <span class="tag">Excursie App</span>
+        <h1>Alles wat je nodig hebt voor de excursie, op een plek.</h1>
+        <p>
+          Dit is een eerste versie van de mobiele website. Later breid ik hem uit met
+          bestemmingen, bezienswaardigheden, activiteiten en praktische informatie.
+        </p>
+        <div class="buttons">
+          <a class="button primary" href="#bestemming">Bekijk start</a>
+          <a class="button secondary" href="#praktisch">Praktische info</a>
+        </div>
+      </div>
+
+      <div class="hero-grid">
+        <div class="card">
+          <h3>Kort overzicht</h3>
+          <p>
+            De app wordt bedoeld voor studenten die snel willen zien wat er te doen is,
+            wat belangrijk is en hoe ze zich kunnen verplaatsen.
+          </p>
+        </div>
+
+        <div class="stat-row">
+          <div class="stat">
+            <strong>2</strong>
+            <span>Bestemmingen</span>
+          </div>
+          <div class="stat">
+            <strong>5+</strong>
+            <span>Plekken</span>
+          </div>
+          <div class="stat">
+            <strong>1</strong>
+            <span>Startpagina</span>
+          </div>
+        </div>
       </div>
     </header>
 
     <section id="navigatie">
-      <h2>Snelle navigatie</h2>
+      <div class="section-head">
+        <h2>Snelle navigatie</h2>
+        <p>Spring direct naar een onderdeel</p>
+      </div>
       <div class="nav grid">
         <a href="#bestemming">Bestemming</a>
         <a href="#bezienswaardigheden">Bezienswaardigheden</a>
@@ -180,7 +61,10 @@
     </section>
 
     <section id="bestemming">
-      <h2>Bestemming</h2>
+      <div class="section-head">
+        <h2>Bestemming</h2>
+        <p>Maastricht of Berlijn</p>
+      </div>
       <div class="grid two-col">
         <article class="card">
           <h3>Maastricht</h3>
@@ -194,7 +78,10 @@
     </section>
 
     <section id="bezienswaardigheden">
-      <h2>Bezienswaardigheden</h2>
+      <div class="section-head">
+        <h2>Bezienswaardigheden</h2>
+        <p>Hier komt later de inhoud</p>
+      </div>
       <div class="card">
         <ul>
           <li>Later komen hier minimaal 5 plekken te staan.</li>
@@ -206,7 +93,10 @@
     </section>
 
     <section id="praktisch">
-      <h2>Praktische info</h2>
+      <div class="section-head">
+        <h2>Praktische info</h2>
+        <p>Voor onderweg</p>
+      </div>
       <div class="grid two-col">
         <article class="card">
           <h3>Kaart en route</h3>
